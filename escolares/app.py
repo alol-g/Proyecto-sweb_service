@@ -38,7 +38,7 @@ ADEUDOS = {
 
 @app.route('/check/<matricula>', methods=['GET'])
 def consultar(matricula):
-    # El Orquestador usará este JSON para dar el veredicto final [cite: 52, 59]
+    # El Orquestador usará este JSON para dar el veredicto final
     res = ADEUDOS.get(matricula, {"adeudo": False, "detalle": "No registrado / Sin adeudos"})
     
     return jsonify({
@@ -48,5 +48,5 @@ def consultar(matricula):
     })
 
 if __name__ == '__main__':
-    # Puerto 5002 asignado al microservicio de Escolares en la red LAN [cite: 45]
+    # Puerto 5002 asignado al microservicio de Escolares en la red LAN
     app.run(host='0.0.0.0', port=5002)
