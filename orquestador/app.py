@@ -7,10 +7,10 @@ app = Flask(__name__)
 # IMPORTANTE: En el laboratorio, cambia las 'XX' por las IPs 
 # reales de las computadoras de tus compañeros.
 NODOS = {
-    "biblioteca": "http://192.168.1.XX:5001",
-    "escolares": "http://192.168.1.YY:5002",
-    "lab_redes": "http://192.168.1.ZZ:5003",
-    "lab_electronica": "http://192.168.1.WW:5004"
+    "biblioteca": "http://10.169.8.27:5001",
+    "escolares": "http://10.169.8.40:5002",
+    "lab_redes": "http://10.169.8.23:5003",
+    "lab_electronica": "http://10.169.8.209:5004"
 }
 
 @app.route('/constancia/<matricula>', methods=['GET'])
